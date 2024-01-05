@@ -1,0 +1,271 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "InvalidEntryPoint",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "entryPoint",
+				"outputs": [
+					{
+						"internalType": "contract IEntryPoint",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getNonce",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "sender",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "nonce",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes",
+								"name": "initCode",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "callData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "uint256",
+								"name": "callGasLimit",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "verificationGasLimit",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "preVerificationGas",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "maxFeePerGas",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "maxPriorityFeePerGas",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes",
+								"name": "paymasterAndData",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes",
+								"name": "signature",
+								"type": "bytes"
+							}
+						],
+						"internalType": "struct UserOperation",
+						"name": "userOp",
+						"type": "tuple"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "userOpHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "missingAccountFunds",
+						"type": "uint256"
+					}
+				],
+				"name": "validateUserOp",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "validationData",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Implements ERC-4337 account support",
+			"kind": "dev",
+			"methods": {
+				"entryPoint()": {
+					"details": "See {BaseERC4337Account-entryPoint}"
+				},
+				"validateUserOp((address,uint256,bytes,bytes,uint256,uint256,uint256,uint256,uint256,bytes,bytes),bytes32,uint256)": {
+					"params": {
+						"missingAccountFunds": "- The amount of funds missing from the account                              to pay for the user operation.",
+						"userOp": "- The user operation to validate.",
+						"userOpHash": "- The hash of the user operation."
+					}
+				}
+			},
+			"title": "ERC-4337 Support",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getNonce()": {
+					"notice": "Return the account nonce. This method returns the next sequential nonce. For a nonce of a specific key, use `entrypoint.getNonce(account, key)`"
+				},
+				"validateUserOp((address,uint256,bytes,bytes,uint256,uint256,uint256,uint256,uint256,bytes,bytes),bytes32,uint256)": {
+					"notice": "Validate user's signature and nonce. Subclass doesn't need to override this method. Instead, it should override the specific internal validation methods."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/contracts-main/src/abstract/ERC4337Account.sol": "ERC4337Account"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/utils/cryptography/ECDSA.sol": {
+			"keccak256": "0xeed0a08b0b091f528356cbc7245891a4c748682d4f6a18055e8e6ca77d12a6cf",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ba80ba06c8e6be852847e4c5f4492cef801feb6558ae09ed705ff2e04ea8b13c",
+				"dweb:/ipfs/QmXRJDv3xHLVQCVXg1ZvR35QS9sij5y9NDWYzMfUfAdTHF"
+			]
+		},
+		"contracts/contracts-main/src/abstract/ERC4337Account.sol": {
+			"keccak256": "0x8ca8dc41c5662b61f8be119d8db45c70f876a706adf7848c97a2959997ecc9b7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9dc5a4bbd0e782c959663282504986cadb7e6d18ca90a058801648f70a94c7e6",
+				"dweb:/ipfs/QmY9nhngJKd2ADzGe4FH6yJza8gadszV3dndmS1mo5Ltew"
+			]
+		},
+		"contracts/contracts-main/src/utils/Errors.sol": {
+			"keccak256": "0xe76252f43b7e3c4ff98b3cfeab9cbd506d71e44d9524f394d2f17e93a9090db5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8aa0e6cb301d21bc320f410c92aa1c8975ae67f301510fd31e49211b67aeebec",
+				"dweb:/ipfs/QmTjgtHmHAwJkMvUxkxKRwgWu9L2C7PdbdqeEd4Ekdt7AB"
+			]
+		},
+		"https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/core/BaseAccount.sol": {
+			"keccak256": "0xe7946dabc50aca99677c47fb74b00906684af62b17b721cb8a24c21006f76102",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://4e5af9f24431a568c55083600875d7aeafd0addea64f72273b679a1470feb0e6",
+				"dweb:/ipfs/Qmd4EQESCKX9nhYtEtX93WNVHGMfcXCCfsavUdBKoQMS7T"
+			]
+		},
+		"https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/core/Helpers.sol": {
+			"keccak256": "0x81b70ea6183fd28e6c00dc3cf357c8453abdd4cc46ec628e7589e4b6a188d626",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://f4a99aced25a842721a2495760af84b874c1f730c94f8b3e76c71c8b757c90f5",
+				"dweb:/ipfs/QmacEJqVFbwQxE4HTzqvWWAFT7uSbH2Yd7EMqdCx1DxzBz"
+			]
+		},
+		"https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/core/UserOperationLib.sol": {
+			"keccak256": "0x1e28b1f8dac93be686129400777b000c960b0bcc2896a2e0535806f2f0dd7cca",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://76911056faaf865efff923267e5c5b556f6b019787a2ec55ffa856bace497108",
+				"dweb:/ipfs/QmSFQj5DraQNMJCrn7GWSrN6iXRJ9Q9RpcmCGZ1bZg9emR"
+			]
+		},
+		"https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/interfaces/IAccount.sol": {
+			"keccak256": "0x1a11613e6921d1a55ba72169156842ba7d30e966d40a23b34b29c88d1f82345e",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://2bdd695221a8d884d4603d46b5389cc2cdda5cba70f49b57a98e9fba1b9fd2c5",
+				"dweb:/ipfs/QmZyHFwzpRgfa4YgzY4MUbNdj8WSGCjMHw2AxW4LVnMLWE"
+			]
+		},
+		"https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/interfaces/IAggregator.sol": {
+			"keccak256": "0xfc37d01c654f967c0f33b0edcb074231d30841f6fe1b23a070564f13c497b111",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://490630958f3a1861ad16db742e891b8c9f6f229a11f942d25ff58e9bab983c37",
+				"dweb:/ipfs/QmYcvJxvXrXWvDUp6XZZirzjMqk5BaWdmsWWsEtamiuDu9"
+			]
+		},
+		"https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/interfaces/IEntryPoint.sol": {
+			"keccak256": "0x9cdadcebb6491f50a7c136e560f1eb51e785a79ebfa29605a0c5eee3c60adb19",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://236356329adad328f489629e53a141f8842fa00ad42c16cf9ea031cfe77bfa82",
+				"dweb:/ipfs/QmRgjTghLaTcA3xbx6vcfVu6aCUK6W1iN8JS8ric2DPy1x"
+			]
+		},
+		"https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/interfaces/INonceManager.sol": {
+			"keccak256": "0x509871e6c63663cdcc3eba19920fe84e991f38b289b1377ac3c3a6d9f22d7e12",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://00fe21b4349b24c50df60e1a705179293982bd9e7a32b78d4bac9620f89e7fe2",
+				"dweb:/ipfs/QmSFFYGfUwQbVa6hASjU7YxTvgi2HkfrPr4X5oPHscHg8b"
+			]
+		},
+		"https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/interfaces/IStakeManager.sol": {
+			"keccak256": "0x10cdaa14cd2b08279e02c2d4863cea18cfb7e11d7a33cf740755f9a025e7bda1",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://3d214ceee25812bb2a8176dd245a399d84d222cf7f9cf0bc3937afad372f0b7a",
+				"dweb:/ipfs/QmZxqSic8cGeis7R7ufUjf95CgTpyAFY9nCHuiLPbESbYr"
+			]
+		},
+		"https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/interfaces/UserOperation.sol": {
+			"keccak256": "0x093777cb7097dccaffd631d07dfdbd0f731371efe3770fbe22a0c992af4eb4f6",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://6da218e65b43a3f99247b2c66c5946eaa48f2719a0f58469d3a80b4d24b28f00",
+				"dweb:/ipfs/QmQ3np8AwPkWw9Ey4DMMQNJgPSVw3fdrX8wnLaVgYyiaQn"
+			]
+		}
+	},
+	"version": 1
+}

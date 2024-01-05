@@ -1,0 +1,16 @@
+{
+    "name": "@dca-bot-mono/root",
+    "version": "1.0.0",
+    "private": true,
+    "workspaces": [
+        "apps/*",
+        "services/*",
+        "contracts/*"
+    ],
+    "dependencies": {
+        "@babel/core": "^7.23.7",
+        "@babel/plugin-transform-runtime": "^7.23.7",
+        "@babel/preset-env": "^7.23.7",
+        "@babel/preset-react": "^7.23.3"
+    }
+}

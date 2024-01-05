@@ -1,0 +1,80 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "footer",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "header",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/contracts-main/src/lib/LibSandbox.sol": "LibSandbox"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/utils/Create2.sol": {
+			"keccak256": "0x2b9807d194b92f1068d868e9587d27037264a9a067c778486f86ae21c61cbd5e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://22d71f40aa38a20cf466d8647452a6e3f746353474f8c8af40f03aa8cae38420",
+				"dweb:/ipfs/QmQ752Hz5av7YDK8pFojzb5qgeXQvfsdkdwkHVzaXoYAZR"
+			]
+		},
+		"contracts/contracts-main/src/lib/LibSandbox.sol": {
+			"keccak256": "0x2b9e052e12b3a43fbdc9ebb243e06b1c5c9ffaae48a7790eaa1529d154ddb286",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://aa58c01e094f61cb340c7a2aceaf05afeeae903fcd36d76afbfbb0782d73776b",
+				"dweb:/ipfs/QmcrsiZ7Han2j5kg7yqmm9W2SCMehJ1wPv57wE4Rqr6rEz"
+			]
+		}
+	},
+	"version": 1
+}
