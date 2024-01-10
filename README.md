@@ -1,10 +1,10 @@
-## DBA Bot Mono Repo
+## DCA Agent Mono Repo
 
 # /apps
 - /dca-fe
     The DCA Front End consists of a mint page and settings page 
 - /dca-iframe
-    The DCA Iframe serves the dynamic artwork for the DCA Bot NFT 
+    The DCA Iframe serves the dynamic artwork for the DCA Agent NFT 
 
 # /contracts
 - /dca-account 
