@@ -21,3 +21,4 @@
 # /services
 - AWS Lambda Serverless Functions for User Settings and Async Transactions
 
+# Please note that in this repo "Bot" and "Agent" are used interchangeably. 
