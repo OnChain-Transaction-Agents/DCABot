@@ -1,5 +1,9 @@
 ## DCA Agent Mono Repo
 
+# Architecture Overview 
+- ![Screenshot 2024-01-09 at 7 10 25 PM](https://github.com/OnChain-Transaction-Agents/DCABot/assets/130921094/6c7aec9d-9023-4ec7-b564-fc3ffc6ddd4e)
+
+
 # /apps
 - /dca-fe
     The DCA Front End consists of a mint page and settings page 
@@ -14,4 +18,5 @@
 
 
 # /services
-- AWS Lambda Serverless Functions for User Settings and Async Transactions 
+- AWS Lambda Serverless Functions for User Settings and Async Transactions
+
