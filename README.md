@@ -1,7 +1,8 @@
 ## DCA Agent Mono Repo
 
 # Architecture Overview 
-- ![Screenshot 2024-01-09 at 7 10 25 PM](https://github.com/OnChain-Transaction-Agents/DCABot/assets/130921094/6c7aec9d-9023-4ec7-b564-fc3ffc6ddd4e)
+![Screenshot 2024-01-09 at 7 22 03 PM](https://github.com/OnChain-Transaction-Agents/DCABot/assets/130921094/2178f10e-ed69-4872-b51e-bc6c4e1a5b34)
+
 
 
 # /apps
